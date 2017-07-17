@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from threading import *
 import time
 
@@ -58,7 +59,10 @@ class Consumer(Thread):
 
 if __name__ == "__main__":
     X = itemX()
+    #Condition 也是一種鎖，除了 acquire/release 以外，還能夠用 wait / notify / notifyAll
+    #notify是一個通知，如果先通知才有人開始等，會等不到先發生的那個通知
     cond = Condition()
+    Producer(cond, X).start()
     Producer(cond, X).start()
     Consumer(cond, X).start()
     Consumer(cond, X).start()

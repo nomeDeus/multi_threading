@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from threading import *
 import time
 
@@ -49,7 +50,6 @@ class Consumer(Thread):
             time.sleep(self.sleeptime)
             self.con.acquire()
             print '({0})enter\r\n'.format(self.getName())
-            #while self.item.isEmpty():
             while (True):
                 print '({0})wait'.format(self.getName())
                 self.event.wait()
@@ -66,6 +66,8 @@ if __name__ == "__main__":
     X = itemX()
     cond_Con = Condition()
     cond_Pro = Condition()
+    #event為一種狀態，不像condtion的notify / wait需要一定順序
+    #只要處於激發狀態，且狀態沒有改變，任何時候都可以等得到
     event = Event()
     Producer(cond_Pro, event, X).start()
     Producer(cond_Pro, event, X).start()
