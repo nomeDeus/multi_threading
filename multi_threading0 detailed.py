@@ -37,8 +37,7 @@ def main():
     t1 = threading.Thread(target=job1, args=(8,q,lock))
     #打開一個名字叫 t1 的線程物件
     #這個物件會去呼叫 job1
-    #同時t1導入 q 跟 lock 做現成控制
-    #為什麼要這樣做...我也不知道XD
+    #同時t1導入 q 跟 lock 做線程控制
     
     t2 = threading.Thread(target=job2, args=(8,q,lock))
     
