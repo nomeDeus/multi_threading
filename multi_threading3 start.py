@@ -17,6 +17,6 @@ class MyThread(Thread):
 if __name__ == "__main__":
     for i in range(1,5):
         #當呼叫 start() 時，會自動去呼叫 run()
-        MyThread('Threading', i).start()
+        MyThread('Threading', i).start() #啟動 MyThread 線程
 
 #P.S 只能夠 override __init()__ 和 run() ，不能夠 override start()
