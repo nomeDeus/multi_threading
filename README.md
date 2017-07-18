@@ -1,12 +1,12 @@
-+*threading.active_count()：回傳目前仍活著的thread的數量
-+threading.current_thread()：回傳目前的thread
-+threading.get_ident()：回傳目前thread的識別碼 (identifier)
-+threading.enumerate()：回傳目前活著的所有thread的清單
-+threading.main_thread()：回傳主thread(main thread)，通常是Python開始編譯的那個
-+threading.settrace(func)：設定一個追蹤函式 (trace function)
-+threading.setprofile(func)：設定一個個資函式 (profile function)
-+threading.stack_size([size])：當創立新的thread，回傳堆疊大小 (stack size)
-+threading.TIMEOUT_MAX：允許阻塞函式的超時參數的最大數量 (The maximum value allowed for the timeout parameter of blocking functions)  e.g. Lock.acquire(), RLock.acquire(), Condition.wait(), etc.
++   threading.active_count()：回傳目前仍活著的thread的數量
++   threading.current_thread()：回傳目前的thread
++   threading.get_ident()：回傳目前thread的識別碼 (identifier)
++   threading.enumerate()：回傳目前活著的所有thread的清單
++   threading.main_thread()：回傳主thread(main thread)，通常是Python開始編譯的那個
++   threading.settrace(func)：設定一個追蹤函式 (trace function)
++   threading.setprofile(func)：設定一個個資函式 (profile function)
++   threading.stack_size([size])：當創立新的thread，回傳堆疊大小 (stack size)
++   threading.TIMEOUT_MAX：允許阻塞函式的超時參數的最大數量 (The maximum value allowed for the timeout parameter of blocking functions)  e.g. Lock.acquire(), RLock.acquire(), Condition.wait(), etc.
 
 class threading.Thread(group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
 >    start()：啟動thread的活動
